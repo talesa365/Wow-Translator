@@ -6,4 +6,8 @@ readme-update-talesa
 Co-Contributors 
 --Talesa Howell
 -- Bryan M. Wolf
-main
+--jlotto8-patch-1
+-- Jessica Loto 
+
+
+
