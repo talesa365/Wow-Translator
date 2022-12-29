@@ -1,5 +1,5 @@
 body {
-    /* background-color: #324E5C; */
+    background-color: #57849b;
   }
   
   h1 {
@@ -41,7 +41,7 @@ body {
   
   p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 45px;
+    font-size: 25px;
     font-weight: bold;
     margin-top: 6px;
   }
@@ -56,8 +56,9 @@ body {
   } */
   
   .startScreen {
-    background-image: url('images/backgroundImage2.png');
-    background-size: cover;
+    background-image: url('images/backgroundImage1.png');
+    height:35%;
+    margin-bottom: 0;
  
   }
   
@@ -156,3 +157,38 @@ body {
   .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px;
   }
+  .landing-btn::before, .landing-btn::after {
+    transition-delay: 0.2s;
+}
+
+.landing-btn span::before, .landing-btn span::after {
+    transition-delay: 0s;
+}
+
+.landing-btn::before {
+    right: 0;
+    top: 0;
+}
+
+.landing-btn::after {
+    left: 0;
+    bottom: 0;
+}
+
+.landing-btn span::before{
+    left: 0;
+    top: 0;
+}
+
+.landing-btn span::after {
+    right: 0;
+    bottom: 0;
+}
+
+.landing-btn:hover::before, .landing-btn:hover::after {
+    transition-delay: 0s;
+}
+
+.landing-btn:hover span::before, .landing-btn:hover span::after {
+    transition-delay: 0.2s;
+}
