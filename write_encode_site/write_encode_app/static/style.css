@@ -1,0 +1,194 @@
+body {
+    background-color: #57849b;
+  }
+  
+  h1 {
+    margin-top: 30px;
+    font-family: 'Righteous', cursive;
+    font-size: 55px;
+  }
+  
+  h2 {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: -5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    color: white;
+  }
+  
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 110%;
+  }
+  
+  h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-top: 18px;
+  }
+  
+  h5 {
+    font-size: 6px;
+    margin-top: 25px;
+    margin-left: 134px;
+  }
+  .text-center{
+    text-align: center;
+  }
+  
+  
+  p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 6px;
+  }
+  
+  /* .appFrame {
+    background-color: #D3D3D3;
+    width: 320px;
+    height: 580px;
+    margin-top: 10%;
+    border: 10px solid #333238;
+    border-radius: 10px;
+  } */
+  
+  .startScreen {
+    background-image: url('images/backgroundImage1.png');
+    height:35%;
+    margin-bottom: 0;
+ 
+  }
+  
+  
+  
+  .translateNow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    width: auto;
+    height: 80px;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: #38A3AC;
+    margin-top: 85%;
+    margin-bottom: 30px;
+  }
+  .onoffswitch {
+    position: relative;
+    width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  .onoffswitch-checkbox {
+    display: none;
+  }
+  
+  .onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #999999;
+    border-radius: 10px;
+  }
+  
+  .onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+  }
+  
+  .onoffswitch-inner:before,
+  .onoffswitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  
+  .onoffswitch-inner:before {
+    content: "Binary";
+    padding-left: 10px;
+    background-color: #38A3AC;
+    color: #FFFFFF;
+    
+  }
+  
+  .onoffswitch-inner:after {
+    content: "Morse Code";
+    padding-right: 10px;
+    background-color: #EB6161;
+    color: #FAF0F0;
+    text-align: right;
+  }
+  
+  .onoffswitch-switch {
+    display: block;
+    width: 18px;
+    margin: 6px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 96px;
+    border: 2px solid #999999;
+    border-radius: 10px;
+    transition: all 0.3s ease-in 0s;
+  }
+  
+  .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+  }
+  
+  .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+  }
+  .landing-btn::before, .landing-btn::after {
+    transition-delay: 0.2s;
+}
+
+.landing-btn span::before, .landing-btn span::after {
+    transition-delay: 0s;
+}
+
+.landing-btn::before {
+    right: 0;
+    top: 0;
+}
+
+.landing-btn::after {
+    left: 0;
+    bottom: 0;
+}
+
+.landing-btn span::before{
+    left: 0;
+    top: 0;
+}
+
+.landing-btn span::after {
+    right: 0;
+    bottom: 0;
+}
+
+.landing-btn:hover::before, .landing-btn:hover::after {
+    transition-delay: 0s;
+}
+
+.landing-btn:hover span::before, .landing-btn:hover span::after {
+    transition-delay: 0.2s;
+}
