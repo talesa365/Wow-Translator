@@ -11,8 +11,10 @@ class Sessions(models.Model):
     inputs = models.ManyToManyField(Input)
 
 class Translation(models.Model):
-        language = models.CharField(max_length=9999, unique=True)
-        input = models.ForeignKey(Input, on_delete=models.CASCADE)
+    language = models.CharField(max_length=15,)
+    input = models.ForeignKey(Input, on_delete=models.CASCADE)
+    output = models.CharField(max_length=999999999)
+
 
 
     
