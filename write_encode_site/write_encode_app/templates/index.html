@@ -65,9 +65,11 @@
   <div class="data">
     <h1>Translate to BINARY</h1>
   </div> 
-  <div class="input-field">
-    <input type="text" id="input" autocomplete="off" placeholder="Input field" />
-  </div>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" name="input-field" value="Input"/>
+</form>
   <div class="button">
     <button class="click">Click to translate to Binary
     </button>
@@ -83,9 +85,11 @@
    <div class="data">
      <h1>Translate to Morse</h1>
    </div> 
-   <div class="input-field">
-     <input type="text" id="input" autocomplete="off" placeholder="input field" />
-   </div>
+   <form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" name="input-field" value="Translation" />
+</form>
    <div class="button">
      <button class="click">Click to translate to Morse
      </button>
