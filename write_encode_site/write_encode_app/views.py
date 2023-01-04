@@ -11,7 +11,7 @@ class TranslatorView(View):
     def get(self, request):
         return render(
             request=request,
-            # template_name='translator.html',
+            template_name='index.html',
             # context=
 
         )

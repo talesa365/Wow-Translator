@@ -3,12 +3,39 @@
 
 <html>
     <head>
-        {% extends 'translate.html' %}
-        <link rel="stylesheet" href="{% static '../static/style.css' %}">
+        {% comment %} {% extends 'index.html' %} {% endcomment %}
+        <link rel="stylesheet" href="../static/style.css">
   
     </head>
-    <body>
-<h1>History</h1>
+    <body class='myBod'>
+
+<div class="drip-wrapper">
+    <div class="drip-top"></div>
+    <div class="drip"></div>
+    <div class="drip"></div>
+    <div class="drip"></div>
+    <div class="drip"></div>
+    <div class="drip"></div>
+    <div class="cdrip"></div>
+    <div class="drip"></div>
+    <div class="drip"></div>
+    <div class="drip"></div>
+    <div class="drip"></div>
+    <div class="drip-bottom"></div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+    </defs>
+  </svg>
+  </div>
+  <h1 class="text-light">History</h1>
+  <p class="text-light">Here are your last 10 translations.</p>
+  <!-- partial -->
+    
 <ul>
     {% for  in  %}
     <li></li>
