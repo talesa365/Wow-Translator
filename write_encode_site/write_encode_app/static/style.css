@@ -616,16 +616,6 @@ body {
   width:auto;
 }
 
-/* .data {
-  width: auto;
-  text-align: center;
-  background: #222222;
-  color: #ffffff;
-  padding: 10px 0 10px;
-  margin: 25px ;
-  
-} */
-
 input {
   display: block;
   padding: 10px 0 10px;
@@ -633,7 +623,7 @@ input {
   margin: 0 auto 25px auto;
   text-align: center;
   height: 60px;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 button {
@@ -660,9 +650,16 @@ input:focus {
   text-decoration: none;
   color: #fff;
 }
+.clear {
+  background: #4190A9;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+
+}
 
 .click:hover {
-  background: #cccccc;
+  background: #E75E25;
 }
 
 .result {

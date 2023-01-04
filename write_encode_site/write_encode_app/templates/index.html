@@ -66,31 +66,39 @@
     <h1>Translate to BINARY</h1>
   </div> 
   <div class="input-field">
-    <input type="text" id="input" autocomplete="off" placeholder="Input data" />
+    <input type="text" id="input" autocomplete="off" placeholder="Input field" />
   </div>
   <div class="button">
-    <button class="click">Click translate to Binary
+    <button class="click">Click to translate to Binary
     </button>
   </div>
+  {% comment %} Output field {% endcomment %}
   <div class="result clearfix">
      <p id="answer"></p>
   </div> <!-- end container -->
 </div>
+
 <!-- translator field for Morse -->
  <div class="container2">
    <div class="data">
      <h1>Translate to Morse</h1>
    </div> 
    <div class="input-field">
-     <input type="text" id="input" autocomplete="off" placeholder="input data" />
+     <input type="text" id="input" autocomplete="off" placeholder="input field" />
    </div>
    <div class="button">
-     <button class="click">Click to translate
+     <button class="click">Click to translate to Morse
      </button>
    </div>
    <div class="result clearfix">
       <p id="answer"></p>
-   </div> <!-- end container -->
+   </div> 
+   <!-- end container -->
 </div>
+  {% comment %} clear field  {% endcomment %}
+  <div class="button">
+    <button class="clear">Clear field
+    </button>
+  </div>
 </body>
 </html>
