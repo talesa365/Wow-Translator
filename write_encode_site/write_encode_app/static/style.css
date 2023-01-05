@@ -1,12 +1,15 @@
 
+
 body {
   background: #62575a;
   line-height: 0%;
 }
-#image {
+
+#monkey {
   width: 300px;
   height: 300px;
-  position: absolute;
+
+  
 }
 #center {
   border-radius: 50%;
@@ -599,18 +602,18 @@ body {
   margin: 15px;
   position: absolute;
   top: 70%;
-  left: 75%;
+  left: 72%;
   transform: translate(-50%, -50%);
-  padding: 20px;
+  padding: 10px;
   width:auto;
 }
 .container2 {
   margin: 15px;
   position: absolute;
   top: 70%;
-  right: 55%;
+  right: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
+  padding: 10px;
   width:auto;
 }
 
@@ -627,11 +630,13 @@ input {
 button {
   display: block;
   float: left;
-  width: 100%;
-  height: 75px;
+  width: auto;
+  height: 45px;
   margin-bottom: 25px;
+  margin-left: 10px;
   font-family: 'Helvetica Neue';
   font-size: 18px;
+  border-radius: 5px;
 }
 
 button:focus {
@@ -647,13 +652,6 @@ input:focus {
   border: none;
   text-decoration: none;
   color: #fff;
-}
-.clear {
-  background: #4190A9;
-  border: none;
-  text-decoration: none;
-  color: #fff;
-
 }
 
 .click:hover {
@@ -867,7 +865,14 @@ input:focus {
     background: #090a0f;
   }
 }
-.text-header{
-  text-align: center;
-  margin-top:5rem;
+
+#intro{
+  color: #cbced1;
+  line-height:normal;
+  word-wrap: normal;
+  position: relative;
+   bottom:20rem;
+   padding: 5em;
+
+
 }

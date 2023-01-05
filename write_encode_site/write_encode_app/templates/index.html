@@ -5,8 +5,12 @@
   <title>Write Encode</title>
   <link rel="stylesheet" href="../static/style.css">
 </head>
+
+ {% endcomment %}
 <body>
+
 <!-- landing/base page -->
+<div id='monkey'>
 <div id='center'></div>
 <div id='left-cheek-ball-1'></div>
 <div id='left-cheek-ball-2'></div>
@@ -60,6 +64,7 @@
 <div id='tongue'></div>
 <div id='tongue-shadow'></div>
 <div id='jay-lenno-mask'></div>
+</div>
 <!-- translator field -->
 <div class="container1">
   <div class="data">
@@ -69,15 +74,20 @@
     <input type="text" id="input" autocomplete="off" placeholder="Input field" />
   </div>
   <div class="button">
-    <button class="click">Click to translate to Binary
-    </button>
+    <button class="click">Translate to Binary
+    </button>  <button class="button">Clear field
+   </button>  <button class="button" a href="src">View history
+   </button>
   </div>
   {% comment %} Output field {% endcomment %}
   <div class="result clearfix">
      <p id="answer"></p>
   </div> <!-- end container -->
 </div>
+ <div id="intro"><h3 >Morse code is a type of code that is used to send telegraphic information using rhythm. Morse code uses dots and dashes to show the alphabet letters, numbers, punctuation and special characters of a given message. When messages are sent by Morse code, dots are short beeps or clicks or flashes, and dashes are longer ones.<br>
 
+    Morse code is named after Samuel Morse, who helped invent it. It is not used as much today as it was in the 19th and 20th centuries. Teletypewriters were invented in the early 20th century with their own codes and gradually replaced Morse code. Other types of technology that are easier to use for communication became even more common. However, some people still use Morse code to communicate on amateur radio.</h3>
+</div> 
 <!-- translator field for Morse -->
  <div class="container2">
    <div class="data">
@@ -87,18 +97,16 @@
      <input type="text" id="input" autocomplete="off" placeholder="input field" />
    </div>
    <div class="button">
-     <button class="click">Click to translate to Morse
-     </button>
+     <button class="click">Translate to Morse
+     </button>  <button class="button">Clear field
+    </button>  <button class="button" a href="src">View history
+    </button>
    </div>
    <div class="result clearfix">
       <p id="answer"></p>
    </div> 
    <!-- end container -->
 </div>
-  {% comment %} clear field  {% endcomment %}
-  <div class="button">
-    <button class="clear">Clear field
-    </button>
-  </div>
+ 
 </body>
 </html>
