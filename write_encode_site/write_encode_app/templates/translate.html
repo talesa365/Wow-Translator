@@ -1,9 +1,10 @@
 {% load static %}
+
 <!DOCTYPE html>
 
 <html>
     <head>
-{% extends 'index.html' %}
+
         <link rel="stylesheet" href="{% static '../static/style.css' %}">
   
     </head>
@@ -43,10 +44,10 @@
             <div class="col-6"></div>
             <div class="col-6">
               <div class="buttons btn-group-vertical">
-                <a href="{% url 'Translator' %}">
+                <a href="{% url 'translator' %}">
                   <button class="landing-btn btn-md"><span>Translate to Morse Code</span></button>
                 </a>
-                <a href="{% url 'Translator' %}">
+                <a href="{% url 'translator' %}">
                     <button class="landing-btn btn-md"><span>Translate to binary Code</span></button>
                   </a>
                 <a href="{% url 'history' %}">
