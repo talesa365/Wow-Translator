@@ -6,9 +6,8 @@ Translates any word or phrase into multiple different styles. Such styles includ
 readme-update-talesa
 
 Co-Contributors 
---Talesa Howell
+-- Talesa Howell
 -- Bryan M. Wolf
---jlotto8-patch-1
--- Jessica Loto 
--- Ahmad
+-- Jessica Lotto 
+-- Ahmad Bright
 

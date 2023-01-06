@@ -6,35 +6,26 @@ from write_encode_app.forms import InputForm
 # Create your views here.
 
 def index(request):
-    return HttpResponse('Welcome to the Write Encode Translator Project')
+    return HttpResponse
 
 class TranslatorView(View):
     def get(self, request):
-        return render(
+        return render (
             request=request,
-<<<<<<< HEAD
-            template_name='translate.html',
-            # context=
-
-=======
-            template_name='translate.html',
+            template_name='index.html'
             context={}
-            
->>>>>>> main
         )
+        
     def post(self, request):
         input_form = InputForm()
-        
-
         html_data = {
             'input_form': input_form
         }
         return render(
             request=request,
-            template_name='translate.html',
+            template_name='index.html',
             context=html_data,
         )
-
 
 class HistoryView(View):
     def get(self, request):
