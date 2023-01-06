@@ -15,6 +15,7 @@ class TranslatorView(View):
             template_name='index.html'
             context={}
         )
+        
     def post(self, request):
         input_form = InputForm()
         html_data = {
