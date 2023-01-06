@@ -1,26 +1,31 @@
 
-@import url(https://fonts.googleapis.com/css?family=Kameron);
 
 body {
   background: #62575a;
   line-height: 0%;
 }
-#image {
-  width: 300px;
-  height: 300px;
+#intro{
+  color: #fcfdfe;
+  line-height:normal;
+  word-wrap: inherit;
   position: absolute;
+   bottom:65%;
+   padding: 5em;
+   
+
+
 }
-#center {
+/* #center {
   border-radius: 50%;
-  background: #FEFAD5;
-  width: 520px;
-  height: 520px;
+  background: rgba(255, 251, 214, 0.14);
+  width: 500px;
+  height: 500px;
   position: absolute;
   left: 50%;
   top: 50%; 
-  margin-left: -260px;
-  margin-top: -260px;
-}
+  margin-left: -240px;
+  margin-top: -240px;
+} */
 #head {
   background: #231F20;
   width: 300px;
@@ -96,10 +101,6 @@ body {
   border-radius: 120px / 180px;
   transform: rotate(55deg);
 }
-
-
-
-
 
 #left-ear {
   background: #E75E25;
@@ -492,9 +493,6 @@ body {
   transform: rotate(-5deg);
 }
 
-
-
-
 #top-hair {
   background: #231F20;
   width: 60px;
@@ -596,27 +594,29 @@ body {
   transform: rotate(0deg);
 }
 /* Input containers */
-
+#head{
+  text-align: center;
+}
 .container1 {
   margin: 15px;
   position: absolute;
   top: 70%;
-  left: 75%;
+  left: 72%;
   transform: translate(-50%, -50%);
-  padding: 20px;
+  padding: 10px;
   width:auto;
 }
 .container2 {
   margin: 15px;
   position: absolute;
   top: 70%;
-  right: 55%;
+  right: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
+  padding: 10px;
   width:auto;
 }
 
-input {
+#input {
   display: block;
   padding: 10px 0 10px;
   width: 100%;
@@ -625,15 +625,20 @@ input {
   height: 60px;
   font-size: 20px;
 }
+.data{
+  text-align: center;
+}
 
 button {
   display: block;
   float: left;
-  width: 100%;
-  height: 75px;
+  width: auto;
+  height: 45px;
   margin-bottom: 25px;
+  margin-left: 10px;
   font-family: 'Helvetica Neue';
   font-size: 18px;
+  border-radius: 5px;
 }
 
 button:focus {
@@ -650,13 +655,6 @@ input:focus {
   text-decoration: none;
   color: #fff;
 }
-.clear {
-  background: #4190A9;
-  border: none;
-  text-decoration: none;
-  color: #fff;
-
-}
 
 .click:hover {
   background: #E75E25;
@@ -668,7 +666,7 @@ input:focus {
   background: #dedede;
   
   height: 75px;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bolder;
   padding-bottom: 15px;
 }
@@ -676,3 +674,11 @@ input:focus {
 .result p {
   text-align: center;
 }
+
+/* History page */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+

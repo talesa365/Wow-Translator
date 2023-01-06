@@ -12,9 +12,15 @@ class TranslatorView(View):
     def get(self, request):
         return render(
             request=request,
+<<<<<<< HEAD
+            template_name='translate.html',
+            # context=
+
+=======
             template_name='translate.html',
             context={}
             
+>>>>>>> main
         )
     def post(self, request):
         input_form = InputForm()
