@@ -10,7 +10,7 @@ def index(request):
 
 class TranslatorView(View):
     def get(self, request):
-        return render(
+        return render (
             request=request,
             template_name='index.html'
             context={}
