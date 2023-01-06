@@ -5,8 +5,17 @@
   <title>Write Encode</title>
   <link rel="stylesheet" href="../static/style.css">
 </head>
+
+ {% endcomment %}
 <body>
+  <div id="intro"><h3 >What is Morse code?</h3><p>Morse code is a type of code that is used to send telegraphic information using rhythm.
+    Morse code is named after Samuel Morse, who helped invent it. It is not used as much today as it was in the 19th and 20th centuries. Teletypewriters were invented in the early 20th century with their own codes and gradually replaced Morse code. </p>
+
+    <h3>What Is Binary Code?</h3><p>
+      Binary is a base-2 number system representing numbers using a pattern of ones and zeroes.Binary numbers consist of a series of eight "bits," which are known as a "byte." A bit is a single one or zero that makes up the 8 bit binary number. Using ASCII codes, binary numbers can also be translated into text characters for storing information in computer memory. Check it out below</p>
+</div> 
 <!-- landing/base page -->
+
 <div id='center'></div>
 <div id='left-cheek-ball-1'></div>
 <div id='left-cheek-ball-2'></div>
@@ -60,6 +69,7 @@
 <div id='tongue'></div>
 <div id='tongue-shadow'></div>
 <div id='jay-lenno-mask'></div>
+</div>
 <!-- translator field -->
 <div class="container1">
   <div class="data">
@@ -72,15 +82,17 @@
     <input type="submit" name="morse" value="Translate to Morse"/>
 </form>
   <div class="button">
-    <button class="click">Click to translate to Binary
-    </button>
+    <button class="click">Translate to Binary
+    </button>  <button class="button">Clear field
+   </button>  <button class="button" a href="src">View history
+   </button>
   </div>
   {% comment %} Output field {% endcomment %}
   <div class="result clearfix">
      <p id="answer"></p>
   </div> <!-- end container -->
 </div>
-
+ 
 <!-- translator field for Morse -->
  <div class="container2">
    <div class="data">
@@ -88,18 +100,15 @@
    </div> 
    <textarea></textarea>
    <div class="button">
-     <button class="click">Click to translate to Morse
-     </button>
+     <button class="click">Translate to Morse
+     </button>  <button class="button">Clear field
+    </button>  <button class="button" a href="src">View history
+    </button>
    </div>
    <div class="result clearfix">
       <p id="answer"></p>
    </div> 
    <!-- end container -->
-</div>
-  {% comment %} clear field  {% endcomment %}
-  <div class="button">
-    <button class="clear">Clear field
-    </button>
-  </div>
+
 </body>
 </html>
