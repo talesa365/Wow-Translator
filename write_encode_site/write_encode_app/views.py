@@ -6,13 +6,13 @@ from write_encode_app.forms import InputForm
 # Create your views here.
 
 def index(request):
-    return HttpResponse
+    return HttpResponse ('Welcome')
 
 class TranslatorView(View):
     def get(self, request):
         return render (
             request=request,
-            template_name='index.html'
+            template_name='index.html',
             context={}
         )
         
