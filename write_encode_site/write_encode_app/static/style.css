@@ -675,10 +675,5 @@ input:focus {
   text-align: center;
 }
 
-/* History page */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
+
 
