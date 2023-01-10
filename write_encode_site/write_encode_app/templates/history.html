@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CSS watch animation</title>
+  <title>Translator History</title>
 
 <link rel="stylesheet" href="../static/history.css">
 
@@ -11,14 +11,15 @@
     <div class="textHeader">
   <h1 class="header">History</h1>
   <p class="textHeader">Here are your last 10 translations.</p>
-    </div>
+   
   <!-- partial -->
-    
+  {% csrf_token %}
 <ul class="textList">
-    {% for  in  %}
-    <li></li>
+    {% for ch in input_str %}
+    <li>{{ ch.output }}</li>
     {% endfor %}
 </ul>
+</div>
     </body>
 </html>
 <!-- partial:index.partial.html -->

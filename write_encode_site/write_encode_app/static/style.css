@@ -4,6 +4,13 @@ body {
   background: #62575a;
   line-height: 0%;
 }
+#heading{
+  text-align: center;
+  color: #E75E25;
+  margin-top: 7rem;
+  font-size: 45px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 #intro{
   color: #fcfdfe;
   line-height:normal;
@@ -11,21 +18,8 @@ body {
   position: absolute;
    bottom:65%;
    padding: 5em;
-   
-
-
 }
-/* #center {
-  border-radius: 50%;
-  background: rgba(255, 251, 214, 0.14);
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  left: 50%;
-  top: 50%; 
-  margin-left: -240px;
-  margin-top: -240px;
-} */
+
 #head {
   background: #231F20;
   width: 300px;
@@ -594,14 +588,12 @@ body {
   transform: rotate(0deg);
 }
 /* Input containers */
-#head{
-  text-align: center;
-}
+
 .container1 {
   margin: 15px;
   position: absolute;
   top: 70%;
-  right: 40%;
+  right: 45%;
   transform: translate(-50%, -50%);
   padding: 10px;
   width:auto;
