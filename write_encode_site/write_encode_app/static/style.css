@@ -4,6 +4,13 @@ body {
   background: #62575a;
   line-height: 0%;
 }
+#heading{
+  text-align: center;
+  color: #E75E25;
+  margin-top: 7rem;
+  font-size: 45px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 #intro{
   color: #fcfdfe;
   line-height:normal;
@@ -11,21 +18,8 @@ body {
   position: absolute;
    bottom:65%;
    padding: 5em;
-   
-
-
 }
-/* #center {
-  border-radius: 50%;
-  background: rgba(255, 251, 214, 0.14);
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  left: 50%;
-  top: 50%; 
-  margin-left: -240px;
-  margin-top: -240px;
-} */
+
 #head {
   background: #231F20;
   width: 300px;
@@ -594,14 +588,12 @@ body {
   transform: rotate(0deg);
 }
 /* Input containers */
-#head{
-  text-align: center;
-}
+
 .container1 {
   margin: 15px;
   position: absolute;
   top: 70%;
-  left: 72%;
+  right: 45%;
   transform: translate(-50%, -50%);
   padding: 10px;
   width:auto;
@@ -610,27 +602,33 @@ body {
   margin: 15px;
   position: absolute;
   top: 70%;
-  right: 50%;
+  left: 65%;
   transform: translate(-50%, -50%);
   padding: 10px;
   width:auto;
 }
 
-#input {
-  display: block;
-  padding: 10px 0 10px;
-  width: 100%;
-  margin: 0 auto 25px auto;
+input {
+  display: inline;
+  width: auto;
+  margin: 25px 7px;
+  font-family: 'Helvetica Neue';
+  border-radius: 5px;
+  padding:15px;
   text-align: center;
   height: 60px;
   font-size: 20px;
+  background: #4190A9;
+  border: none;
+  text-decoration: none;
+  color: #fff;
 }
 .data{
   text-align: center;
 }
 
 button {
-  display: block;
+  display: inline;
   float: left;
   width: auto;
   height: 45px;
@@ -639,6 +637,7 @@ button {
   font-family: 'Helvetica Neue';
   font-size: 18px;
   border-radius: 5px;
+  padding:10px;
 }
 
 button:focus {
@@ -647,6 +646,9 @@ button:focus {
 
 input:focus {
   outline: 0;
+}
+input:hover {
+  background: #E75E25;
 }
 
 .click {
@@ -664,8 +666,7 @@ input:focus {
   float: left;
   width: 100%;
   background: #dedede;
-  
-  height: 75px;
+   height: 75px;
   font-size: 20px;
   font-weight: bolder;
   padding-bottom: 15px;
@@ -675,10 +676,5 @@ input:focus {
   text-align: center;
 }
 
-/* History page */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
+
 

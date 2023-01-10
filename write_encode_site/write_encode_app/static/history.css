@@ -7,13 +7,12 @@ body {
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
 }
-#head{
 
-}
 .textHeader{
     text-align: center;
     position: relative;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    margin-right: 5em;
 }
 textList{
     list-style: none;
