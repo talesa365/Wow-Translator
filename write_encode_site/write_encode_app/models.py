@@ -14,7 +14,3 @@ class Translation(models.Model):
     language = models.CharField(max_length=15,)
     input = models.ForeignKey(Input, on_delete=models.CASCADE)
     output = models.TextField(max_length=999999999, default="")
-
-
-
-    

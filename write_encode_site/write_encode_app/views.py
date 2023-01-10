@@ -7,7 +7,6 @@ from write_encode_app.forms import InputForm
 from write_encode_app.models import Session, Input, Translation
 
 from write_encode_app.translators import binary_translator, morse_translator
-# djfhaslkdjfhslkdjfhsad
 
 '''
 Functions for creating & deleting sessions
@@ -76,3 +75,4 @@ class HistoryView(View):
         context={}
         
         )
+        
