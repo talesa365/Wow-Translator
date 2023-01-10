@@ -8,14 +8,15 @@
 
 
 <body>
-  <div id="intro"><h3 >What is Morse code?</h3><p>Morse code is a type of code that is used to send telegraphic information using rhythm.
+  <h1 id="heading">Write Encode Translator</h1>
+  <div id="intro"> <h3 >What is Morse code?</h3><p>Morse code is a type of code that is used to send telegraphic information using rhythm.
     Morse code is named after Samuel Morse, who helped invent it. It is not used as much today as it was in the 19th and 20th centuries. Teletypewriters were invented in the early 20th century with their own codes and gradually replaced Morse code. </p>
 
     <h3>What Is Binary Code?</h3><p>
       Binary is a base-2 number system representing numbers using a pattern of ones and zeroes.Binary numbers consist of a series of eight "bits," which are known as a "byte." A bit is a single one or zero that makes up the 8 bit binary number. Using ASCII codes, binary numbers can also be translated into text characters for storing information in computer memory. Check it out below</p>
-</div> 
+</div>  
 <!-- landing/base page -->
-
+<div id='monkeyface'>
 <div id='center'></div>
 <div id='left-cheek-ball-1'></div>
 <div id='left-cheek-ball-2'></div>
@@ -70,11 +71,12 @@
 <div id='tongue-shadow'></div>
 <div id='jay-lenno-mask'></div>
 </div>
+
 <!-- translator field -->
 <div class="container1">
   <div class="data">
     <h1>Translate to BINARY or Morse Code</h1>
-  </div> 
+  
   <form method=“POST” action=“{% url 'translator' %}“>
     {% csrf_token %}
     {{ input_form }}
@@ -89,15 +91,15 @@
  <div class="container2">
   <div class="data">
     <h1>Output</h1>
-  </div> 
+{% comment %}   
   <div class="data">
    <textarea></textarea>
-  </div> 
-   <div class="button">
+  </div>  {% endcomment %}
+  
     <button class="button click">Clear field</button>  
     <button class="button click" a href="src">View history</button>
    </div>
+  </div>
    <!-- end container -->
-
 </body>
 </html>
