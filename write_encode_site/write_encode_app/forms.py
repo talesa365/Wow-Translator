@@ -6,6 +6,16 @@ class InputForm(ModelForm):
     class Meta:
         model = Input
         fields = ['content']
+        labels = {
+            'content': '',
+        }
+        
+    def save(self, *args, **kwargs):
+        content = self.data['content']
+        char_length = len(self.data['content'])
+        
+        print(content, char_length)
+        # Input.objects.create(content=self.data['content'],)
 
 # class SessionForm(ModelForm):
 #     class Meta:
