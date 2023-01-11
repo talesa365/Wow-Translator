@@ -6,8 +6,6 @@ from django.views import View
 from write_encode_app.forms import InputForm
 from write_encode_app.models import Session, Input, Translation
 
-from write_encode_app.translators import binary_translator, morse_translator
-
 '''
 Functions for creating & deleting sessions
 '''
@@ -30,13 +28,13 @@ class TranslatorView(View):
         try:
             Session.objects.get(session_key=request.session.session_key)
         except Session.DoesNotExist:
-            print(request.session.session_key)
-            # Session.objects.create(session_key=request.session.session_key)
+            Session.objects.create(session_key=request.session.session_key)
 
         input_form =InputForm()
         
         context = {
-            'form': input_form
+            'form': input_form,
+            'translation': 'null',
         }
         
         return render (
@@ -46,26 +44,28 @@ class TranslatorView(View):
         )
         
     def post(self, request):
+        
+        session = Session.objects.get(session_key=request.session.session_key)
+        
         input_form = InputForm(request.POST)
-        input_form.save()
+        input_form.save(session)
         
-        print(binary_translator(request.POST['content']))
-        print(morse_translator(request.POST['content']))
+        input = Input.objects.get(content=request.POST['content'])
         
-        return redirect('translator')
-        # html_data = {
-        #     'input_form': input_form
-        # }
+        input_form = InputForm()
         
-        # if 'binary' in request.POST:
-        #     print('BINARY')
-        # elif 'morse' in request.POST:
-        #     print('MORSE')
-        # return render(
-        #     request=request,
-        #     template_name='index.html',
-        #     context=html_data,
-        # )
+        translation = Translation.objects.get(input_id=input.id)
+        
+        context = {
+            'form': input_form,
+            'translation': translation,
+        }
+        
+        return render (
+            request=request,
+            template_name='index.html',
+            context=context,
+        )
 
 class HistoryView(View):
     def get(self, request):
