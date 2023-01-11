@@ -73,7 +73,10 @@
       <input type="submit" name="morse" value="Translate to Morse"/>
       <input type="submit" name="clear" value="Clear"/>
     </form>
-
+    {% if translation == 'null' %}
     <textarea rows="10" cols="40"></textarea>
+    {% else %}
+    <textarea rows="10" cols="40">{{ translation.output }}</textarea>
+    {% endif %}
   </body>
 </html>
