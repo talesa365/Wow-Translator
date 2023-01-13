@@ -5,6 +5,7 @@ from django.views import View
 
 from write_encode_app.forms import InputForm
 from write_encode_app.models import Session, Input, Translation
+from write_encode_app.translators import binary_translator, morse_translator
 
 '''
 Functions for creating & deleting sessions
@@ -33,8 +34,9 @@ class TranslatorView(View):
         input_form =InputForm()
         
         context = {
+            'session_key': request.session.session_key,
             'form': input_form,
-            'translation': 'null',
+            'translation': '',
         }
         
         return render (
@@ -57,6 +59,7 @@ class TranslatorView(View):
         translation = Translation.objects.get(input_id=input.id)
         
         context = {
+            'session_key': request.session.session_key,
             'form': input_form,
             'translation': translation,
         }
@@ -68,11 +71,57 @@ class TranslatorView(View):
         )
 
 class HistoryView(View):
-    def get(self, request):
+    def get(self, request, session_key):
+
+        session = Session.objects.get(session_key=session_key)
+        
+        translations = Translation.objects.all()
+
+        context = {
+            'session_key': session_key,
+            'session': session.id,
+            'translations': translations,
+        }
+
         return render (
         request=request,
         template_name='history.html',
-        context={}
+        context=context,
+        )
+    
+    def post(self, request, session_key):
+        print(request.POST)
         
+        session = Session.objects.get(session_key=session_key)
+        
+        if 'delete' in request.POST:
+        
+            translation = Translation.objects.get(id=request.POST['delete'])
+            translation.delete()
+        
+        elif 'morse' in request.POST:
+            translation = Translation.objects.get(id=request.POST['morse'])
+            translation.output = morse_translator(translation.input_content)
+            translation.language = 'morse'
+            translation.save()
+        elif 'binary' in request.POST:
+            translation = Translation.objects.get(id=request.POST['binary'])
+            translation.output = binary_translator(translation.input_content)
+            translation.language = 'binary'
+            translation.save()
+            
+        
+        translations = Translation.objects.all()
+
+        context = {
+            'session_key': session_key,
+            'session': session.id,
+            'translations': translations,
+        }
+
+        return render (
+        request=request,
+        template_name='history.html',
+        context=context,
         )
         

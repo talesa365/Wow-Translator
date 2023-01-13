@@ -1,96 +1,103 @@
 <!DOCTYPE html>
+
 <html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Translator History</title>
-
-<link rel="stylesheet" href="../static/history.css">
-
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Translator History</title>
+    <link rel="stylesheet" href="../static/history.css">
+  </head>
+  
+  <body>
+    <button><a href="{% url 'translator' %}">Back To Translator</a></button>
     <div class="textHeader">
-  <h1 class="header">History</h1>
-  <p class="textHeader">Here are your last 10 translations.</p>
-   
-  <!-- partial -->
-  {% csrf_token %}
-<ul class="textList">
-    {% for ch in input_str %}
-    <li>{{ ch.output }}</li>
-    {% endfor %}
-</ul>
-</div>
-    </body>
-</html>
-<!-- partial:index.partial.html -->
-<div class="wrapper">
-  <div class="watch-strap">
-    <div class="strap-circle"></div>
-    <div class="strap"></div>
-    <div class="watch-strap-holder left-up"></div>
-    <div class="watch-strap-holder left-bottom"></div>
-    <div class="watch-strap-holder right-up"></div>
-    <div class="watch-strap-holder right-bottom"></div>
-    <div class="watch-lace">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <span class="top"></span>
-      <span class="bottom"></span>
+      <h1 class="header">History</h1>
+      <p class="textHeader">Here are your last 10 translations.</p>
+      <!-- partial -->
+      {% for translation in translations %}
+      {% if translation.session_id == session %}
+      <form method="POST" action="{% url 'history' session_key %}">
+        {% csrf_token %}
+        <textarea>{{ translation.input_content }}</textarea>
+        <textarea>{{ translation.output }}</textarea><br/>
+        {% if translation.language == 'binary' %}
+        <button type="submit" name="morse" value="{{ translation.id }}">Retranslate to Morse</button>
+        <button type="submit" name="delete" value="{{ translation.id }}">Delete</button>
+        {% elif translation.language == 'morse' %}
+        <button type="submit" name="binary" value="{{ translation.id }}">Retranslate to Binary</button>
+        <button type="submit" name="delete" value="{{ translation.id }}">Delete</button>
+        {% endif %}
+      </form>
+      {% endif %}
+      {% endfor %}
     </div>
-  </div>
-  <div class="watch-case">
-    <div class="reflection"></div>
-    <div class="reflection bottom"></div>
-    <div class="watch-center">
-      <div class="watch-points"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-      <div class="watch-tips">
-        <span class="hours"></span>
-        <span class="minutes"></span>
-        <span class="seconds"></span>
+    <!-- partial:index.partial.html -->
+    <div class="wrapper">
+      <div class="watch-strap">
+        <div class="strap-circle"></div>
+        <div class="strap"></div>
+        <div class="watch-strap-holder left-up"></div>
+        <div class="watch-strap-holder left-bottom"></div>
+        <div class="watch-strap-holder right-up"></div>
+        <div class="watch-strap-holder right-bottom"></div>
+        <div class="watch-lace">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <span class="top"></span>
+          <span class="bottom"></span>
+        </div>
       </div>
-      <div class="watch-date">15 JAN</div>
-      <div class="watch-alert">Your class <br>begins in <strong>15</strong> min</div>
-      <div class="watch-week">
-        <span class="week-arrow"></span>
-        <ul>
-          <div>S</div>
-          <div>M</div>
-          <div>T</div>
-          <div>W</div>
-          <div>T</div>
-          <div>F</div>
-          <div>S</div>
-        </ul>
-      </div>
-       <div class="watch-day">
-         <div class="sun">
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-         </div>
-         
-      </div>
-      <div class="watch-week days">
-        <span class="week-arrow"></span>
-        <ul>
-          <div>3</div>
-          <div>6</div>
-          <div>9</div>       
-        </ul>
+      <div class="watch-case">
+        <div class="reflection"></div>
+        <div class="reflection bottom"></div>
+        <div class="watch-center">
+          <div class="watch-points"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="watch-tips">
+            <span class="hours"></span>
+            <span class="minutes"></span>
+            <span class="seconds"></span>
+          </div>
+          <div class="watch-date">15 JAN</div>
+          <div class="watch-alert">Your class <br>begins in <strong>15</strong> min</div>
+          <div class="watch-week">
+            <span class="week-arrow"></span>
+            <ul>
+              <div>S</div>
+              <div>M</div>
+              <div>T</div>
+              <div>W</div>
+              <div>T</div>
+              <div>F</div>
+              <div>S</div>
+            </ul>
+          </div>
+          <div class="watch-day">
+            <div class="sun">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div> 
+          </div>
+          <div class="watch-week days">
+            <span class="week-arrow"></span>
+            <ul>
+              <div>3</div>
+              <div>6</div>
+              <div>9</div>       
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</body>
+  </body>
 </html>
