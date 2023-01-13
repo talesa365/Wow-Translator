@@ -24,17 +24,6 @@ class InputForm(ModelForm):
         session.inputs.add(input)
         
         if 'binary' in self.data:
-            Translation.objects.create(input_id=input.id, output=binary_translator(content), language='binary')
+            Translation.objects.create(input_id=input.id, output=binary_translator(content), language='binary', session_id=session.id, input_content=content,)
         elif 'morse' in self.data:
-            Translation.objects.create(input_id=input.id, output=morse_translator(content), language='morse')
-            
-
-# class SessionForm(ModelForm):
-#     class Meta:
-#         model = Session
-#         fields = ['']
-
-# class TranslationForm(ModelForm):
-#     class Meta:
-#         model = Translation
-#         fields = ['']
+            Translation.objects.create(input_id=input.id, output=morse_translator(content), language='morse', session_id=session.id, input_content=content,)
