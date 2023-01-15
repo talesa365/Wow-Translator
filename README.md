@@ -64,12 +64,12 @@ CSS
 Home page that reveals an input and output field, with two buttons- for the user to choose to translate their input into either Morse or binary code.
 <img width="1440" alt="Screenshot 2023-01-12 at 6 09 04 PM" src="https://user-images.githubusercontent.com/111258836/212209490-d83b36e4-dd05-43e9-a584-58665d219448.png">
 
-## Translate to Morse code
+## Translate to Binary code
 
 Text from the input field translated into binary code
 <img width="1440" alt="Screenshot 2023-01-12 at 7 25 59 PM" src="https://user-images.githubusercontent.com/111258836/212209187-3f891fe0-0aad-474f-8bed-46513bd823be.png">
 
-## Translate to binary code
+## Translate to Morse code
 
 Text from the input field translated into Morse code
 <img width="1440" alt="Screenshot 2023-01-12 at 7 56 27 PM" src="https://user-images.githubusercontent.com/111258836/212212558-74e5e210-073d-4d5a-b783-c26b53118096.png">
