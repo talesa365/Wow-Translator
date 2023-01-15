@@ -7,7 +7,7 @@ class Input(models.Model):
 
 class Session(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
-    session_key = models.CharField(max_length=50, unique=True,)
+    session_key = models.CharField(max_length=50, unique=True, null=True)
     inputs = models.ManyToManyField(Input)
 
 class Translation(models.Model):

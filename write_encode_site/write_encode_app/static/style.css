@@ -1,8 +1,12 @@
-
-
 body {
   background: #62575a;
   line-height: 0%;
+}
+#id_content {
+  transform: translate(142.5px, 200px)
+}
+.output-text {
+  transform: translate(900px, -66px)
 }
 #heading{
   text-align: center;
@@ -611,7 +615,7 @@ body {
 input {
   display: inline;
   width: auto;
-  margin: 25px 7px;
+  margin: 25px 1px;
   font-family: 'Helvetica Neue';
   border-radius: 5px;
   padding:15px;
@@ -622,6 +626,7 @@ input {
   border: none;
   text-decoration: none;
   color: #fff;
+  transform: translate(113px, 180px)
 }
 .data{
   text-align: center;
@@ -638,6 +643,7 @@ button {
   font-size: 18px;
   border-radius: 5px;
   padding:10px;
+  transform: translate(1150px, -400px);
 }
 
 button:focus {

@@ -9,12 +9,12 @@ body {
 }
 
 .textHeader{
-    text-align: center;
-    position: relative;
-    margin-top: 2rem;
-    margin-right: 10em;
+  text-align: center;
+  position: relative;
+  margin-top: 2rem;
+  margin-right: 10em;
 }
-textList{
+.textList{
     list-style: none;
 }
 .wrapper {
