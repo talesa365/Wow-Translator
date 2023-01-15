@@ -41,7 +41,6 @@ pip freeze install
 pip install -r requirements.txt
 ```
 # 4. Run django
-cd into the nyc-guide directory
 run the command: python manage.py runserver
 And go to `http://localhost:8000`
 
